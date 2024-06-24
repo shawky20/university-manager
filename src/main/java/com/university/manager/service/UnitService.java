@@ -36,6 +36,7 @@ public class UnitService {
             unitDTO.setPrice(unit.getPrice());
             unitDTO.setAddress(unit.getAddress());
             unitDTO.setUniversity(String.valueOf(unit.getUniversity()));
+            unitDTO.setRegion(unit.getRegion());
             List<Transportation> transportations = transportationRepo.findByUnit(unit);
             List<TransportationDTO> transportationDTOS = new ArrayList<>();
             if (transportations != null) {
@@ -123,6 +124,7 @@ public class UnitService {
             departmentDTO.setPrice(department.getPrice());
             departmentDTO.setAddress(department.getAddress());
             departmentDTO.setUniversity(String.valueOf(department.getUniversity()));
+            departmentDTO.setRegion(department.getRegion());
             List<Transportation> transportations = transportationRepo.findByUnit(department);
             List<TransportationDTO> transportationDTOS = new ArrayList<>();
             if (transportations != null) {
@@ -227,6 +229,7 @@ public class UnitService {
         departmentDTO.setDetails(department.getDetails());
         departmentDTO.setPrice(department.getPrice());
         departmentDTO.setAddress(department.getAddress());
+        departmentDTO.setRegion(department.getRegion());
         departmentDTO.setUniversity(String.valueOf(department.getUniversity()));
         List<Transportation> transportations = transportationRepo.findByUnit(department);
         List<TransportationDTO> transportationDTOS = new ArrayList<>();
